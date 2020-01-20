@@ -29,7 +29,10 @@ module.exports = function (ctx) {
       all: 'auto',
 
       components: [
-        'QInput'
+        'QInput',
+        'QCard',
+        'QCardSection',
+        'QCardActions'
       ],
       directives: [],
 
