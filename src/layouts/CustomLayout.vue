@@ -27,14 +27,15 @@
    <q-drawer v-model="openMobileMenu" bordered content-class="bg-grey-3" >
       <q-list>
         <q-item-label header> Lista de Páginas </q-item-label>
-        <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
+        <q-item clickable @click="goBack()">
+
           <q-item-section avatar>
             <q-icon name="search" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Docs</q-item-label>
-            <q-item-label caption>quasar.dev</q-item-label>
+            <q-item-label>Inicio</q-item-label>
           </q-item-section>
+
         </q-item>
       </q-list>
 
@@ -66,8 +67,12 @@ export default {
     
   },
   methods: {
-    search: function () {
+    search() {
+      //TODO:
       console.log(this.text);
+    },
+    goBack() {
+      this.$router.push('/');
     }
   }
 }

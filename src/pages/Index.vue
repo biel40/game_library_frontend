@@ -6,7 +6,6 @@
         <q-card-section>
           <div class="text-h6">Mi Lista</div>
         </q-card-section>
-
       </q-card>
     </div>
 
@@ -24,7 +23,6 @@
         <q-card-section>
           <div class="text-h6">Statistics</div>
         </q-card-section>
-
       </q-card>
     </div>
 
@@ -48,13 +46,13 @@ export default {
 
   methods: {
     goToMyList() {
-      console.log('yendo a mi lista');
+      this.$router.push('/myList');
     },
    goToIntroduceContent() {
-     console.log('yendo a introducir contenido');
+      this.$router.push('/introduceContent');
    },
    goToStatistics() {
-     console.log('yendo a estadísticas');
+      this.$router.push('/statistics');
    }
 
   }
@@ -64,7 +62,14 @@ export default {
 </script>
 
 <style scoped>
+
   div {
     cursor: pointer;
+    border-radius: 20px;
   }
+
+  .text-h6 {
+    padding: 1.5em;
+  }
+
 </style>
