@@ -11,7 +11,7 @@
     </div>
 
     <div class="q-gutter-x-lg">
-      <q-card dark bordered class="bg-green-6 my-card" @click="goToMyList()">
+      <q-card dark bordered class="bg-green-6 my-card" @click="goToIntroduceContent()">
         <q-card-section>
           <div class="text-h6">Introducir Contenido</div>
         </q-card-section>
@@ -20,7 +20,7 @@
     </div>
 
     <div >
-      <q-card dark bordered class="bg-blue-7 my-card" @click="goToMyList()">
+      <q-card dark bordered class="bg-blue-7 my-card" @click="goToStatistics()">
         <q-card-section>
           <div class="text-h6">Statistics</div>
         </q-card-section>
@@ -47,9 +47,16 @@ export default {
   },
 
   methods: {
-    goToMyList: function () {
+    goToMyList() {
       console.log('yendo a mi lista');
-    }
+    },
+   goToIntroduceContent() {
+     console.log('yendo a introducir contenido');
+   },
+   goToStatistics() {
+     console.log('yendo a estadísticas');
+   }
+
   }
 
 }

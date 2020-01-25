@@ -1,9 +1,9 @@
 <template>
   <q-layout view="lhh lpR fFf">
 
-    <q-header reveal class="bg-primary text-white" height-hint="98">
+    <q-header reveal class="bg-primary text-white row justify-between" height-hint="98">
         
-      <q-toolbar>
+      <q-toolbar class="col-2">
           <q-btn
           flat
           dense
@@ -15,8 +15,8 @@
         <q-toolbar-title> Game Library </q-toolbar-title>
       </q-toolbar>
 
-        <div class="column float-right" style="max-width: 350px" >
-            <q-input class="q-gutter-x-md" v-model="text" label="Label" counter maxlength="12" :dense="dense" >
+        <div class="col-2 self-start" style="margin-right: 2%; padding-top: 1%;" >
+            <q-input v-model="text" counter maxlength="12" :dense="dense" >
                 <q-btn @click="search()" rounded icon="search" color="secondary" ></q-btn>
             </q-input>
         </div>
