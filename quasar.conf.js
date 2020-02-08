@@ -1,5 +1,4 @@
 // Configuration for your app
-// https://quasar.dev/quasar-cli/quasar-conf-js
 
 module.exports = function (ctx) {
   return {
@@ -19,28 +18,30 @@ module.exports = function (ctx) {
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
 
-      'roboto-font', // optional, you are not bound to it
-      'material-icons' // optional, you are not bound to it
+      'roboto-font', 
+      'material-icons' 
     ],
 
     framework: {
-      iconSet: 'material-icons', // Quasar icon set
-      lang: 'en-us', // Quasar language pack
+      iconSet: 'material-icons', 
+      lang: 'es', 
       all: 'auto',
 
       components: [
         'QInput',
         'QCard',
         'QCardSection',
-        'QCardActions'
+        'QCardActions',
+        'QForm',
+        'QDate',
+        'QImg'
+        
       ],
       directives: [],
 
-      // Quasar plugins
       plugins: []
     },
 
-    // https://quasar.dev/quasar-cli/cli-documentation/supporting-ie
     supportIE: false,
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
@@ -50,24 +51,18 @@ module.exports = function (ctx) {
       showProgress: true,
       gzip: false,
       analyze: false,
-      // Options below are automatically set depending on the env, set them if you want to override
-      // preloadChunks: false,
-      // extractCSS: false,
 
-      // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
       extendWebpack (cfg) {
       }
+
     },
 
-    // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
     devServer: {
       https: false,
       port: 8080,
       open: true // opens browser window automatically
     },
 
-    // animations: 'all', // --- includes all animations
-    // https://quasar.dev/options/animations
     animations: [],
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr

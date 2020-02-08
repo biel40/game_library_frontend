@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     search() {
-      //TODO:
+      //TODO: Implement the Search function 
       console.log(this.text);
     },
     goBack() {
