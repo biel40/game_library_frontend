@@ -1,39 +1,42 @@
 <template>
-  <q-page class="flex">
+  <q-page class="flex row">
     
-    <div class="q-pa-md" style="max-width: 50%">
-      <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md" >
+    <div class="column inline col-6" >
 
-        <q-input class="q-pa-md" filled v-model="name" label="Nombre del contenido *" hint="Nombre del contenido" 
+      <q-form @submit="onSubmit" class="q-gutter-xs col-6" >
+
+        <q-input class="q-pa-md" style="width: 50%;" filled v-model="name" label="Nombre del contenido *" hint="Nombre del contenido" 
           lazy-rules
           :rules="[ val => val && val.length > 0 || 'No puedes introducir un contenido sin nombre']"
         />
 
-        <q-input class="q-pa-md" filled v-model="description" label="Descripcion del contenido *" hint="Descripción" />
+        <q-input class="q-pa-md" style="width: 50%;" filled v-model="description" label="Descripcion del contenido *" hint="Descripción" />
 
-        <q-input class="q-pa-md" filled v-model="img_url" label="Imagen de portada *" hint="Imagen de Portada" />
+        <q-input id="input_url" class="q-pa-md" style="width: 50%;" filled v-model="img_url" label="Imagen de portada *" hint="Imagen de Portada"  />
 
 
         <div class="q-pa-md">
           <p> Fecha de Lanzamiento: </p>
-          <q-date v-model="date" />
+          <q-date style="width: 20%;" v-model="date" />
         </div>
 
-        <div>
-          <q-btn label="Agregar Contenido" type="submit" color="primary" />
-          <q-btn label="Reiniciar Formulario" type="reset" color="primary" flat class="q-ml-sm" />
+        <div class="q-ml-xl">
+          <q-btn class="" label="Agregar Contenido" type="submit" color="primary" />
         </div>
 
       </q-form>
 
-      <div class="col-7">
-        <q-img
-          src="https://placeimg.com/500/300/nature"
-          :ratio="1"
-        />
-      </div>
-
     </div>
+
+    <div class="col-4 q-mt-md" >
+
+      <q-img
+        id="q_img_url"
+        :src="img_url"
+        :ratio="1"
+      />
+
+      </div>
 
   </q-page>
 </template>
@@ -47,7 +50,7 @@ export default {
       release_date: null,
       accept: false,
       description: '',
-      img_url: '',
+      img_url: 'https://placeimg.com/500/300/nature',
 
       date: '2020/02/08'
     }
@@ -58,12 +61,8 @@ export default {
       
     },
 
-    onReset () {
-      this.name = null
-      this.age = null
-      this.date = null
-    }
   }
+  
 }
 
 </script>
