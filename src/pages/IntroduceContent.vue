@@ -3,7 +3,7 @@
     
     <div class="column inline col-6" >
 
-      <q-form @submit="onSubmit" class="q-gutter-xs col-6" >
+      <q-form @submit="onSubmit" class="q-gutter-md col-6" >
 
         <q-input class="q-pa-md" style="width: 50%;" filled v-model="name" label="Nombre del contenido *" hint="Nombre del contenido" 
           lazy-rules
@@ -12,7 +12,7 @@
 
         <q-input class="q-pa-md" style="width: 50%;" filled v-model="description" label="Descripcion del contenido *" hint="Descripción" />
 
-        <q-input id="input_url" class="q-pa-md" style="width: 50%;" filled v-model="img_url" label="Imagen de portada *" hint="Imagen de Portada"  />
+        <q-input id="input_url" class="q-pa-md" style="width: 50%;" filled v-model="img_url" label="Imagen de portada" />
 
 
         <div class="q-pa-md">
@@ -28,15 +28,22 @@
 
     </div>
 
-    <div class="col-4 q-mt-md" >
+    <div class="col-4 q-mt-xl" >
 
       <q-img
-        id="q_img_url"
         :src="img_url"
         :ratio="1"
-      />
+      >
 
-      </div>
+      <template v-slot:error >
+        <div class="absolute-full flex flex-center bg-negative text-white">
+          Cannot load image
+        </div>
+      </template>
+
+      </q-img>
+
+    </div>
 
   </q-page>
 </template>
