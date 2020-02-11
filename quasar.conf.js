@@ -2,9 +2,7 @@
 
 module.exports = function (ctx) {
   return {
-    // app boot file (/src/boot)
-    // --> boot files are part of "main.js"
-    // https://quasar.dev/quasar-cli/cli-documentation/boot-files
+
     boot: [
       'i18n',
       'axios'
@@ -75,8 +73,8 @@ module.exports = function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
+        name: 'Game Library',
+        short_name: 'Game Library',
         description: 'A Quasar Framework app',
         display: 'standalone',
         orientation: 'portrait',

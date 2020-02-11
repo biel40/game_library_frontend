@@ -2,7 +2,7 @@
   "name": "game_library_frontend",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "productName": "Game Library",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "Biel Borràs <bielet40@gmail.com>",

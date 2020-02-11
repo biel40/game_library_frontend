@@ -12,15 +12,20 @@
           icon="menu"
           aria-label="Menu"
         />
-        <q-toolbar-title> Game Library </q-toolbar-title>
+
+        <div class="col-12 self-start q-ml-md q-mt-md" >
+          <q-input v-model="text" counter maxlength="12" :dense="dense" >
+            <q-btn @click="search()" rounded icon="search" color="secondary" ></q-btn>
+          </q-input>
+        </div>
+        
       </q-toolbar>
 
-        <div class="col-2 self-start" style="margin-right: 2%; padding-top: 1%;" >
-            <q-input v-model="text" counter maxlength="12" :dense="dense" >
-                <q-btn @click="search()" rounded icon="search" color="secondary" ></q-btn>
-            </q-input>
-        </div>
-      
+      <div class="col-1 self-center" >
+        <label> Salir </label>
+        <q-btn @click="goBack()" rounded icon="exit_to_app" color="positive" ></q-btn>
+      </div>
+
     </q-header>
 
 
@@ -68,8 +73,10 @@ export default {
   },
   methods: {
     search() {
+
       //TODO: Implement the Search function 
       console.log(this.text);
+
     },
     goBack() {
       this.$router.push('/');
